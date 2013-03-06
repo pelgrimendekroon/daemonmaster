@@ -11,3 +11,7 @@ Install instructions:
 * Make the folder 'html' accessible to the internet (so example.com leads to ./html)
 * Go to example.com/install
 * Enter your database settings
+
+Credits
+============
+We use CodeIgniter, PHP, and CodeIgniter Installer for this project.
