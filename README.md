@@ -3,7 +3,7 @@ Daemon Master
 
 The Daemon Master project offers a framework to manage easily monitoring tasks.
 
-Warning: Daemon Master is under development and not suitable for use! But if you are a developer / designer, you welcome :D
+Warning: Daemon Master is under development and not suitable for use! But if you are a developer / designer then you are welcome to join.
 
 Install instructions:
 
