@@ -48,6 +48,7 @@ class Auth extends CI_Controller {
 		}
 		
 		$hash = $this->auth_lib->generate_hash($un, $pw);
+		echo $hash;
 		$query = $this->auth_model->auth($hash, $un);
 		$status = $this->auth_lib->process_inlog($query);
 		
@@ -61,6 +62,8 @@ class Auth extends CI_Controller {
 
 	public function logout()
 	{
+		$this->load->helper('url');
+		$this->load->library('session');
 		$this->session->sess_destroy();	
 		redirect('auth/login');
 		exit(0);

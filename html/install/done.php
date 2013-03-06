@@ -17,8 +17,7 @@ echo $pwdb;
 echo $host;
 echo $mysql_user;
 
-$mysql = mysql_connect($host,$undb,$pwdb) or die("Fout: Er is geen verbinding met de MySQL-server tot stand gebracht!"); 
-mysql_select_db($mysql_user,$mysql) or die("Fout: Het openen van de database is mislukt!");
+
 
 $email = $_POST['email'];
 $name = $_POST['name'];
@@ -29,6 +28,8 @@ $salt = "ahjg#&gojt!fJfgH6#@$";
 $pre_hash = $pw_hashed.$salt.$email;
 $pass = sha1($pre_hash);
 
+$mysql = mysql_connect($host,$undb,$pwdb) or die("Fout: Er is geen verbinding met de MySQL-server tot stand gebracht!"); 
+mysql_select_db($mysql_user,$mysql) or die("Fout: Het openen van de database is mislukt!");
 mysql_query("INSERT INTO dm_users (name, email, password, active) VALUES ('$name', '$email', '$pass', 1)", $mysql) or die("There was an error......");
 
 ?>
