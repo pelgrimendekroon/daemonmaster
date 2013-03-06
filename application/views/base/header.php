@@ -8,9 +8,9 @@
     <meta name="author" content="">
 
     <!-- Le styles -->
-    <link href="css/bootstrap.css" rel="stylesheet" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet" rel="stylesheet">
-    <link href="css/bootstrap-responsive.css" rel="stylesheet">   
+    <link href="<?=base_url();?>css/bootstrap.css" rel="stylesheet" rel="stylesheet">
+    <link href="<?=base_url();?>css/style.css" rel="stylesheet" rel="stylesheet">
+    <link href="<?=base_url();?>css/bootstrap-responsive.css" rel="stylesheet">   
   </head>
   <body>
   

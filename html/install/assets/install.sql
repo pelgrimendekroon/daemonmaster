@@ -1,17 +1,16 @@
 --
 -- Paste your SQL dump into this file
 --
-
 --
 -- Tabelstructuur voor tabel `dm_login_attempts`
 --
 
 CREATE TABLE IF NOT EXISTS `dm_login_attempts` (
   `time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `uid` int(11) NOT NULL,
+  `uid` int(11) DEFAULT '0',
   `reason` int(11) NOT NULL,
   `ip` varchar(256) NOT NULL,
-  PRIMARY KEY (`time`,`uid`)
+  PRIMARY KEY (`time`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -37,7 +36,8 @@ CREATE TABLE IF NOT EXISTS `dm_users` (
   `name` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
+  `role` int(11) NOT NULL,
   `active` int(11) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `email` (`email`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;

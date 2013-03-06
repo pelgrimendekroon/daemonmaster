@@ -26,7 +26,7 @@ $plain_pass = $_POST['password'];
 
 $pw_hashed = sha1($plain_pass);
 $salt = "ahjg#&gojt!fJfgH6#@$";
-$pre_hash = $pw_hashed.$salt.$user;
+$pre_hash = $pw_hashed.$salt.$email;
 $pass = sha1($pre_hash);
 
 mysql_query("INSERT INTO dm_users (name, email, password, active) VALUES ('$name', '$email', '$pass', 1)", $mysql) or die("There was an error......");
