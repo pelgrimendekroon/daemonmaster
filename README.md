@@ -7,7 +7,7 @@ Warning: Daemon Master is under development and not suitable for use! But if you
 
 Install instructions:
 
--Clone this repos
--Make the folder 'html' accessible to the internet (so example.com leads to ./html)
--Go to example.com/install
--Enter your database settings
+* Clone this repos
+* Make the folder 'html' accessible to the internet (so example.com leads to ./html)
+* Go to example.com/install
+* Enter your database settings
