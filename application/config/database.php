@@ -49,11 +49,11 @@ $active_group = 'default';
 $active_record = TRUE;
 
 $db['default']['hostname'] = 'localhost';
-$db['default']['username'] = 'asfasfd';
-$db['default']['password'] = '';
-$db['default']['database'] = '';
+$db['default']['username'] = 'xxxxxxx';
+$db['default']['password'] = 'xxxxxxx';
+$db['default']['database'] = 'xxxxxxx';
 $db['default']['dbdriver'] = 'mysql';
-$db['default']['dbprefix'] = '';
+$db['default']['dbprefix'] = 'dm_';
 $db['default']['pconnect'] = TRUE;
 $db['default']['db_debug'] = TRUE;
 $db['default']['cache_on'] = FALSE;
