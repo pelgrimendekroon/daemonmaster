@@ -19,7 +19,7 @@ class Overview extends DM_UI_Controller {
 	 */
 	public function index()
 	{
-		$this->viewloader('overview/overview');
+		$this->viewloader("overview/overview");
 	}
 }
 
