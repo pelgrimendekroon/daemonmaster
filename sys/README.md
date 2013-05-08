@@ -14,4 +14,4 @@ Install instructions:
 
 Credits
 ============
-We use CodeIgniter, PHP, and CodeIgniter Installer for this project.
+We use CodeIgniter, PHP, jQuery, Bootstrap.js and CodeIgniter Installer for this project.
