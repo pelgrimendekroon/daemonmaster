@@ -24,22 +24,23 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="brand" href="#">Daemon Master</a>
+          <a class="brand" href="<?=site_url();?>">Daemon Master</a>
           <div class="nav-collapse collapse">
            <ul class="nav pull-right">
                     <li id="fat-menu" class="dropdown">
-                      <a href="#" id="drop3" role="button" class="dropdown-toggle" data-toggle="dropdown">Logged in as Username<b class="caret"></b></a>
+                      <a href="#" id="drop3" role="button" class="dropdown-toggle" data-toggle="dropdown">Logged in as <?=$un?><b class="caret"></b></a>
                       <ul class="dropdown-menu" role="menu" aria-labelledby="drop3">
-                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Profile</a></li>
-                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Settings</a></li>
-                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Add Plugin</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Profile and Settings</a></li>
+                        <li role="presentation" class="divider"></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="<?=site_url('install/overview');?>">Module management</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="<?=site_url('install');?>">Install Module</a></li>
                         <li role="presentation" class="divider"></li>
                         <li role="presentation"><a role="menuitem" tabindex="-1" href="<?=site_url('auth/logout');?>">Logout</a></li>
                       </ul>
                     </li>
                   </ul>
             <ul class="nav">
-              <li class="active"><a href="#">Home</a></li>
+              <li class="active"><a href="<?=site_url();?>">Home</a></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
