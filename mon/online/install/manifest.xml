@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<manifest>
+<module>uptime</module>
+<version>1</version>
+<type>mon</type>
+<description>Check if server still alive</description>
+</manifest>
