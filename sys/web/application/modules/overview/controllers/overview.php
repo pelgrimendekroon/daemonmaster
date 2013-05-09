@@ -17,6 +17,12 @@ class Overview extends DM_UI_Controller {
 	 * map to /index.php/overview/<method_name>
 	 * @see http://codeigniter.com/user_guide/general/urls.html
 	 */
+	 
+	public function __construct()
+	{
+		parent::__construct();
+	}
+	
 	public function index()
 	{
 		

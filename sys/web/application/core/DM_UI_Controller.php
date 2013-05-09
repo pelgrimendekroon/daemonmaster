@@ -10,10 +10,11 @@ class DM_UI_Controller extends DM_Base_Controller
 	{
 		if(isset($views))
 		{
+			$header['un'] = $this->session->userdata('email');
 			//If array user wants to load multiple views
 			if(is_array($views))
 			{
-				$this->load->view('base/header');
+				$this->load->view('base/header', $header);
 				foreach ($views as $key => $view) 
 				{
 					echo $key;
@@ -25,7 +26,7 @@ class DM_UI_Controller extends DM_Base_Controller
 			//user wants to load a single view
 			else
 			{
-				$this->load->view('base/header');
+				$this->load->view('base/header', $header);
 				$this->load->view($views, $parms);
 				$this->load->view('base/footer');	
 			}

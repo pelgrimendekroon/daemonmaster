@@ -1,4 +1,4 @@
-<h1>Yeah, it works!</h1>
+<h1>Scenario Overview</h1>
 
             <table class="table">
               <thead>
@@ -6,7 +6,7 @@
                   <th>#</th>
                   <th>Name</th>
                   <th>Description</th>
-                  <th>Status</th>
+                  <th>Last Status</th>
                 </tr>
               </thead>
               <tbody>
