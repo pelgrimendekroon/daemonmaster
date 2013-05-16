@@ -40,9 +40,21 @@ class Install_model extends CI_Model {
 		  {
 			  $manifest = simplexml_load_file($dir."/install/manifest.xml") or die("kan niet laden");
 			  $result['module'] = $module;
-			  $result['type'] = $type;
+			  $result['type'] = (string) $manifest->type;
+			  $result['invoke'] = (string) $manifest->invoke;
 			  $result['description'] = (string) $manifest->description[0];
 			  $result['version'] = (int) $manifest->version;
+			  $i = 0;
+
+				  foreach((array) $manifest->inputs as $input)
+				  {
+						$result['parms'][$i]['required'] = (bool) $input['required'];
+						$result['parms'][$i]['parm'] = (string)$input->parm;
+						$result['parms'][$i]['name'] = (string)$input->name;
+						$result['parms'][$i]['description'] = (string)$input->description;
+						$i++;
+				  }
+
 			  $result['installed'] = R::count('modules','module = ?', array($module));
 		  }
 		  else
@@ -65,14 +77,27 @@ class Install_model extends CI_Model {
 		}
 		else
 		{
-			if(!$info['error'])
+			
+			if($info['errors']==0)
 			{
 				$newmod = R::dispense('modules');
 				$newmod->module = $info['module'];
+				$newmod->type = $info['type'];
 				$newmod->description = $info['description'];
 				$newmod->version = $info['version'];
 				$newmod->enabled = 0;
 				R::store($newmod);
+
+				foreach($info['parms'] as $parm)
+				{
+					$newparm = R::dispense('parms');
+					$newparm->name = $parm['name'];
+					$newparm->parm = $parm['parm'];
+					$newparm->desc = $parm['description'];
+					R::store($newparm);
+					$newparm->modules = $newmod;
+					R::store($newparm);
+				}
 			}
 		}
 	}

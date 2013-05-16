@@ -32,6 +32,8 @@
                       <ul class="dropdown-menu" role="menu" aria-labelledby="drop3">
                         <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Profile and Settings</a></li>
                         <li role="presentation" class="divider"></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="<?=site_url('scenario/create');?>">Create scenario</a></li>
+                        <li role="presentation" class="divider"></li>
                         <li role="presentation"><a role="menuitem" tabindex="-1" href="<?=site_url('install/overview');?>">Module management</a></li>
                         <li role="presentation"><a role="menuitem" tabindex="-1" href="<?=site_url('install');?>">Install Module</a></li>
                         <li role="presentation" class="divider"></li>

@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Overview extends DM_UI_Controller {
+class Create extends DM_UI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -21,14 +21,22 @@ class Overview extends DM_UI_Controller {
 	public function __construct()
 	{
 		parent::__construct();
-		$this->load->model('Overview_model', '', TRUE);	
+		$this->load->model('Scenario_model', '', TRUE);	
 	}
 	
 	public function index()
 	{
-		$data['scenarios'] = $this->Overview_model->retrieve_scenarios();
-		$this->viewloader("overview/overview", $data);
+		$data['actions'] = $this->Scenario_model->retrieve_mods("act");
+		$data['mons'] = $this->Scenario_model->retrieve_mods("mon");
+		$this->viewloader("scenario/create", $data);
 	}
+	
+	public function receive()
+	{
+		$this->Scenario_model->create_scenario($this->input->post());
+		redirect('/overview');
+	}
+	
 }
 
 /* End of file overview.php */

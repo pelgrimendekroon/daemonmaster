@@ -29,6 +29,13 @@ class Install extends DM_UI_Controller {
 	
 	public function app($place, $module)
 	{
+		if($place=="mon")
+			$place; //nothing to do, it's already OK :)
+		else if($place=="act")
+			$place = "action";
+		else
+			show_error('No valid install type!' , 500);
+
 		$this->Install_model->install_module($place, $module);
 		$this->index();
 	}	
