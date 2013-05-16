@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 <manifest>
-<module>uptime</module>
+<module>online</module>
 <version>1</version>
 <type>mon</type>
 <description>Check if server still alive</description>
+<invoke>online.php</invoke>
+<inputs>
+	<input required="true">
+		<parm>-t</parm>
+		<name>Target</name>
+		<description>Target http host, incl. http</description>
+	</input>
+</inputs>
 </manifest>
