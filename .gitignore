@@ -3,6 +3,7 @@
 */logs/!index.html
 */cache/*
 */cache/!index.html
-application/config/database.php
-application/config/config.php
-application/logs/*
+sys/web/application/config/database.php
+sys/web/application/config/config.php
+sys/web/application/logs/*
+sys/daemon/minute.php
