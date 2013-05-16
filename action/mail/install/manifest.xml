@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<manifest>
+<module>mail</module>
+<version>1</version>
+<type>act</type>
+<description>Send a mail</description>
+<invoke>mail.php</invoke>
+<inputs>
+	<input required="true">
+		<parm>-t</parm>
+		<name>To</name>
+		<description>Mail adress</description>
+	</input>
+</inputs>
+</manifest>
