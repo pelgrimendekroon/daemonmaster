@@ -83,6 +83,7 @@ class Install_model extends CI_Model {
 				$newmod = R::dispense('modules');
 				$newmod->module = $info['module'];
 				$newmod->type = $info['type'];
+				$newmod->invoke = $info['invoke'];
 				$newmod->description = $info['description'];
 				$newmod->version = $info['version'];
 				$newmod->enabled = 0;

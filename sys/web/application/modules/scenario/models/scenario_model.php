@@ -23,6 +23,7 @@ class Scenario_model extends CI_Model {
 				$scenario = R::dispense('scenarios');
 				$scenario->name = $input['name'];
 				$scenario->description = $input['description'];
+				$scenario->last_status = "OK";
 				R::store($scenario);
 				$scenario->mon = R::load('modules', $input['mon']);
 				$scenario->act = R::load('modules', $input['act']);

@@ -9,7 +9,13 @@
               </thead>
               <tbody>
 <?php foreach($scenarios as $scenario): ?>
-                <tr class="success">
+				<?php if($scenario['last_status']=="OK")
+                	echo '<tr class="success">';
+                else if($scenario['last_status']=="WARN")
+				   	echo '<tr class="warning">';
+				else
+				   	echo '<tr class="error">';
+				?>	
                   <td><?=$scenario->id?></td>
                   <td><?=$scenario->name?></td>
                   <td><?=$scenario->description?></td>
