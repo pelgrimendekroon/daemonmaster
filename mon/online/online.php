@@ -1,11 +1,11 @@
 #!/usr/bin/env php
 <?php
-
 error_reporting(0);
-
-if(in_array("-t", $_SERVER['argv'])&&count($_SERVER['argv'])==3)
+if(1)
+//if(in_array("-t", $_SERVER['argv'])&&count($_SERVER['argv'])==3)
 {
-	$url = $_SERVER['argv'][2];
+	//$url = $_SERVER['argv'][2];
+	$url = "http://johndekroon.nl";
 	$headers = get_headers($url);
 	
 	if(($headers[0]=="HTTP/1.1 200 OK")OR ($headers[0]=="HTTP/1.1 302 Found"))
@@ -25,8 +25,8 @@ else
 
 function post_status($status, $desc)
 {
-	$url = "http://daemonmaster.johndekroon.nl/post.php";
-	$postdata = http_build_query(array($status => $desc));
+	$url = "http://daemonmaster.johndekroon.nl/listener.php";
+	$postdata = http_build_query(array($status => $desc, "pass" => "dfjao$fdoikgjTYUrjfw4", "mon" => "online"));
 	$opts = array('http' =>
 		array(
 			'method'  => 'POST',
