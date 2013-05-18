@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<manifest>
+<module>bla</module>
+<version>1</version>
+<type>act</type>
+<description>Just echo bla</description>
+<invoke>bla.php</invoke>
+</manifest>
